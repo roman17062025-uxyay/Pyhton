@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій особистий сайт</title>
+    <style>
+        /* Стилі для красивого вигляду (CSS) */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #7f8c8d;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 15px;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        #secret-message {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #27ae60;
+            display: none; /* Спочатку приховано */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Наповнення сторінки (HTML) -->
+    <div class="card">
+        <h1>Привіт, світ! 👋</h1>
+        <p>Це мій перший сайт, який працює абсолютно безкоштовно на платформі <strong>GitHub Pages</strong>.</p>
+        <button class="btn" onclick="showMessage()">Натисни мене</button>
+        <p id="secret-message">Вітаю! Код працює, а кнопка успішно реагує на клік! 🎉</p>
+    </div>
+
+    <!-- Логіка кнопки (JavaScript) -->
+    <script>
+        function showMessage() {
+            var message = document.getElementById("secret-message");
+            if (message.style.display === "none" || message.style.display === "") {
+                message.style.display = "block";
+            } else {
+                message.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
